@@ -82,7 +82,6 @@
         <br><br>
         <div>
         <form action="testLogin.php" method="POST">   
-     
             <img src="../imagens/logo.png" alt="">
             <br><br>
             <input type="text" name="login" placeholder="Nome">
@@ -93,6 +92,6 @@
             <!--<button><a href="formulario/formulario.php" style="text-decoration:none">Entrar</a></button>-->
         </form>
     </div>
-    <footer>TI SNA versão 0.0.1</footer>
+    <footer>TI SNA versão 2.1</footer>
 </body>
 </html>

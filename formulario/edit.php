@@ -9,7 +9,7 @@
 
         $sqlSelect = "SELECT * FROM tab_cadastro WHERE id=$id";
 
-        $result = $conexao->query($sqlSelect);
+        $result = $conexao->query($sqlSelect); 
 
         if($result->num_rows > 0) 
         {
@@ -126,6 +126,15 @@
             color: black;
 
         }
+        .FotoPerfil{
+            padding-top: 10px;
+            border: none;
+            width: 20px;
+            margin:30px;
+            
+           
+
+        }
     </style>
 </head>
 <body>
@@ -144,7 +153,12 @@
         </div>
         
     </nav>
-    <!--<a href="home.php">Voltar</a>-->
+
+    <div class="FotoPerfil">
+        <img src="../imagens/CartolaFC.PNG" alt="">
+
+    </div>
+    
     <div class="box">
         <form action="formulario.php" method="POST">
             <fieldset>
