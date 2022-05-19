@@ -162,7 +162,7 @@
     <div class="box">
         <form action="formulario.php" method="POST">
             <fieldset>
-                <!--<legend><b>Formulário de Cadastro</b></legend>-->
+               <!-- <legend><b>Formulário de Cadastro</b></legend> -->
                 <br>
                 <div class="inputBox">
                     <input type="text" name="nome" id="nome" class="inputUser" value="<?php echo $nome ?>" required>
