@@ -106,6 +106,13 @@
             outline: none;
             font-size: 15px;
         }
+        #data_visita{
+            border: none;
+            padding: 8px;
+            border-radius: 10px;
+            outline: none;
+            font-size: 15px;
+        }
         #submit{
             background-image: linear-gradient(to right,rgb(0, 92, 197), rgb(90, 20, 220));
             width: 100%;
@@ -204,25 +211,29 @@
                     <label for="autorizadopor" class="labelInput">Autorizado Por.:</label>
                 </div>
                 <br>
+                <label for="data_visita">Data da Visita.:</label><br>
+                <input type="date" name="data_visita" id="data_visita" required>
+                <hr>
+                
                 <div class="divepis">
                 <div id="div1">
-                <p>Fez Integração?</p>
-                <input type="radio" id="sim" name="integ" value="sim" required>
-                <label for="sim">Sim</label>
-                <input type="radio" id="nao" name="integ" value="nao" required>
-                <label for="nao">Não</label>
-                <br><br>
-                <label for="data_integracao">Data da Integraçao.:</label><br>
-                <input type="date" name="data_integracao" id="data_integracao" required>
-                <br><br>
+                    <p>Fez Integração?</p>
+                    <input type="radio" id="sim" name="integ" value="sim" required>
+                    <label for="sim">Sim</label>
+                    <input type="radio" id="nao" name="integ" value="nao" required>
+                    <label for="nao">Não</label>
+                    <br><br>
+                    <label for="data_integracao">Data da Integraçao.:</label><br>
+                    <input type="date" name="data_integracao" id="data_integracao" required>
+                    <br><br>
                 </div>
                 <div id="div2">
-                <p>Uso de EPIs?</p>
-                <input type="radio" id="sim" name="usoepis" value="sim" required>
-                <label for="sim">Sim</label>
-                <input type="radio" id="nao" name="usoepis" value="nao" required>
-                <label for="nao">Não</label>
-                
+                    <p>Uso de EPIs?</p>
+                    <input type="radio" id="sim" name="usoepis" value="sim" required>
+                    <label for="sim">Sim</label>
+                    <input type="radio" id="nao" name="usoepis" value="nao" required>
+                    <label for="nao">Não</label>
+                    
                 </div>
                 </div>
 
