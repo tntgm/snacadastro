@@ -23,14 +23,16 @@
         $empresa = $_POST['empresa'];
         $foto = $_POST['foto'];
         $motivo = $_POST['motivo'];
+        $data_visita = $_POST['data_visita'];
+        $Hora_Entrada = $_POST['Hora_Entrada'];
         $autorizadopor = $_POST['autorizadopor'];
         $integracao = $_POST['integ'];
         $data_integ = $_POST['data_integracao'];
         $usoepis = $_POST['usoepis'];
         $observ = $_POST['observacao'];
       
-        $result = mysqli_query($conexao, "INSERT INTO tab_cadastro(nome,rg,cnh,empresa,foto,motivo,autorizadopor,integracao,data_integ,usoepis,observ) 
-        VALUES ('$nome','$rg','$cnh','$empresa','$foto','$motivo','$autorizadopor','$integracao','$data_integ','$usoepis','$observ')");
+        $result = mysqli_query($conexao, "INSERT INTO tab_cadastro(nome,rg,cnh,empresa,foto,motivo,data_visita,Hora_Entrada,autorizadopor,integracao,data_integ,usoepis,observ) 
+        VALUES ('$nome','$rg','$cnh','$empresa','$foto','$motivo','$data_visita','$Hora_Entrada','$autorizadopor','$integracao','$data_integ','$usoepis','$observ')");
 
         header('Location: sistema.php');
         //echo  "<script>alert('Cadastro Efetuado!!!');</script>";
@@ -55,7 +57,7 @@
         .box{
             color: white;
             position: absolute;
-            top: 82%;
+            top: 90%;
             left: 50%;
             transform: translate(-50%,-50%);
             background-color: rgba(17, 54, 71, 0.5);
@@ -145,6 +147,27 @@
         #div2 {
            /* background-color: gray;*/
         }
+        table{
+            font-family: sans-serif;
+            font-size: 15px;
+            text-align: left;
+            height: 15px;
+            
+        }
+
+        th{
+                        
+            width: 60%;
+            height: 10px;
+            
+        }
+        #Hora_Entrada{
+            border: none;
+            padding: 8px;
+            border-radius: 10px;
+            outline: 5px;
+            font-size: 15px;
+        }
 
 
     </style>
@@ -193,7 +216,7 @@
                 <br>
                 <div class="inputBox">
                     <label>Foto do Visitante.: <input type="file" name="foto" id="foto" class="inputUser"> </label>
-                    <input type="submit" value="Salvar">
+                    <!-- <input type="submit" value="Salvar"> -->
                 </div>
                 <br>
                 <p>Motivo da Entrada.:</p>
@@ -206,14 +229,24 @@
                 <input type="radio" id="descarte" name="motivo" value="descarte" required>
                 <label for="descarte">Descarte de Resíduos</label>
                 <br><br>
+                <table>
+                    <tr>
+                        <th>Data da Visita.:</th>
+                        <th>Horário Entrada.:</th>
+                    </tr>
+                    <tr>
+                        <td><input type="date" name="data_visita" id="data_visita" required></td>
+                        <td><input type="time" name="Hora_Entrada" id="Hora_Entrada" required></td>
+                    </tr>
+                </table>
+                <br><br>
+               <!--  <label for="data_visita">Data da Visita.:</label><br>
+                <input type="date" name="data_visita" id="data_visita" required><br><br> -->
                 <div class="inputBox">
                     <input type="text" name="autorizadopor" id="autorizadopor" class="inputUser" required>
                     <label for="autorizadopor" class="labelInput">Autorizado Por.:</label>
                 </div>
                 <br>
-                <label for="data_visita">Data da Visita.:</label><br>
-                <input type="date" name="data_visita" id="data_visita" required>
-                <hr>
                 
                 <div class="divepis">
                 <div id="div1">

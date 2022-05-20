@@ -21,13 +21,15 @@
                 $empresa = $user_data['empresa'];
                 $foto = $user_data['foto'];
                 $motivo = $user_data['motivo'];
+                $data_visita = $user_data['data_visita'];
+                $Hora_Entrada = $user_data['Hora_Entrada'];
                 $autorizadopor = $user_data['autorizadopor'];
                 $integracao = $user_data['integracao'];
                 $data_integ = $user_data['data_integ'];
                 $usoepis = $user_data['usoepis'];
                 $observ = $user_data['observ'];
             }
-            //print_r($nome);
+            
         }
         else
         {
@@ -126,14 +128,48 @@
             color: black;
 
         }
-        .FotoPerfil{
+        img{
             padding-top: 10px;
             border: none;
-            width: 20px;
-            margin:30px;
-            
-           
+            height: 300px;
+            width: 300;
+            margin:10px;
+        }
+        .divepis {
 
+            display: inline-block;
+            width: 300px;
+            height: 300px;
+            
+        }
+        #div1 {
+            /*background-color: blue;*/
+
+        }
+
+        #div2 {
+           /* background-color: gray;*/
+        }
+        table{
+            font-family: sans-serif;
+            font-size: 15px;
+            text-align: left;
+            height: 15px;
+            
+        }
+
+        th{
+                        
+            width: 60%;
+            height: 10px;
+            
+        }
+        #Hora_Entrada{
+            border: none;
+            padding: 8px;
+            border-radius: 10px;
+            outline: 5px;
+            font-size: 15px;
         }
     </style>
 </head>
@@ -155,8 +191,8 @@
     </nav>
 
     <div class="FotoPerfil">
-        <img src="../imagens/CartolaFC.PNG" alt="">
-
+        <img src="../fotos/<?php echo $foto ?>" alt="">
+        
     </div>
     
     <div class="box">
@@ -197,7 +233,21 @@
                 <br>
                 <input type="radio" id="descarte" name="motivo" value="descarte" <?php echo $motivo == 'descarte' ? 'checked' : '' ?> required>
                 <label for="descarte">Descarte de Resíduos</label>
-                <br><br><br>
+                <br><br>
+                <table>
+                    <tr>
+                        <th>Data da Visita.:</th>
+                        <th>Horário Entrada.:</th>
+                    </tr>
+                    <tr>
+                        <td><input type="date" name="data_visita" id="data_visita" value="<?php echo $data_visita ?>" required></td>
+                        <td><input type="time" name="Hora_Entrada" id="Hora_Entrada" value="<?php echo $Hora_Entrada ?>" required></td>
+                    </tr>
+                </table>
+                <br><br>
+               <!--  <label for="data_visita">Data da Visita.:</label><br>
+                <input type="date" name="data_visita" id="data_visita" value="<?php echo $data_visita ?>" 
+                    required><br><br> -->
                 <div class="inputBox">
                     <input type="text" name="autorizadopor" id="autorizadopor" class="inputUser" value="<?php echo $autorizadopor ?>" required>
                     <label for="motivo" class="labelInput">Autorizado Por.:</label>
