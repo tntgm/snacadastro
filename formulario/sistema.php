@@ -107,6 +107,7 @@
                     <th scope="col">Motivo</th>
                     <th scope="col">Data Visita</th>
                     <th scope="col">Hora Entrada</th>
+                    <th scope="col">Hora Saída</th>
                     <th scope="col">Autorizado Por</th>
                     <th scope="col">Integraçao</th>
                     <th scope="col">Data Integração</th>
@@ -127,6 +128,7 @@
                         echo "<td>".$user_data['motivo']."</td>";
                         echo "<td>".$user_data['data_visita']."</td>";
                         echo "<td>".$user_data['Hora_Entrada']."</td>";
+                        echo "<td>".$user_data['Hora_Saida']."</td>";
                         echo "<td>".$user_data['autorizadopor']."</td>";
                         echo "<td>".$user_data['integracao']."</td>";
                         echo "<td>".$user_data['data_integ']."</td>";

@@ -17,22 +17,23 @@
 
         include_once('config.php');
 
-        $nome = $_POST['nome'];
-        $rg = $_POST['rg'];
-        $cnh = $_POST['cnh'];
-        $empresa = $_POST['empresa'];
-        $foto = $_POST['foto'];
-        $motivo = $_POST['motivo'];
-        $data_visita = $_POST['data_visita'];
-        $Hora_Entrada = $_POST['Hora_Entrada'];
-        $autorizadopor = $_POST['autorizadopor'];
-        $integracao = $_POST['integ'];
-        $data_integ = $_POST['data_integracao'];
-        $usoepis = $_POST['usoepis'];
-        $observ = $_POST['observacao'];
+                    $nome = $_POST['nome'];
+                    $rg = $_POST['rg'];
+                    $cnh = $_POST['cnh'];
+                    $empresa = $_POST['empresa'];
+                    $foto = $_POST['foto'];
+                    $motivo = $_POST['motivo'];
+                    $data_visita = $_POST['data_visita'];
+                    $Hora_Entrada = $_POST['Hora_Entrada'];
+                    $Hora_Saida = $_POST['Hora_Saida'];
+                    $autorizadopor = $_POST['autorizadopor'];
+                    $integracao = $_POST['integ'];
+                    $data_integ = $_POST['data_integracao'];
+                    $usoepis = $_POST['usoepis'];
+                    $observ = $_POST['observacao'];
       
         $result = mysqli_query($conexao, "INSERT INTO tab_cadastro(nome,rg,cnh,empresa,foto,motivo,data_visita,Hora_Entrada,autorizadopor,integracao,data_integ,usoepis,observ) 
-        VALUES ('$nome','$rg','$cnh','$empresa','$foto','$motivo','$data_visita','$Hora_Entrada','$autorizadopor','$integracao','$data_integ','$usoepis','$observ')");
+        VALUES ('$nome','$rg','$cnh','$empresa','$foto','$motivo','$data_visita','$Hora_Entrada','$Hora_Saida','$autorizadopor','$integracao','$data_integ','$usoepis','$observ')");
 
         header('Location: sistema.php');
         //echo  "<script>alert('Cadastro Efetuado!!!');</script>";
@@ -150,18 +151,25 @@
         table{
             font-family: sans-serif;
             font-size: 15px;
-            text-align: left;
+            text-align: center;
             height: 15px;
             
         }
 
         th{
                         
-            width: 60%;
+            width: 30%;
             height: 10px;
             
         }
         #Hora_Entrada{
+            border: none;
+            padding: 8px;
+            border-radius: 10px;
+            outline: 5px;
+            font-size: 15px;
+        }
+        #Hora_Saida{
             border: none;
             padding: 8px;
             border-radius: 10px;
@@ -233,10 +241,12 @@
                     <tr>
                         <th>Data da Visita.:</th>
                         <th>Horário Entrada.:</th>
+                        <th>Horário Saída.:</th>
                     </tr>
                     <tr>
                         <td><input type="date" name="data_visita" id="data_visita" required></td>
                         <td><input type="time" name="Hora_Entrada" id="Hora_Entrada" required></td>
+                        <td><input type="time" name="Hora_Saida" id="Hora_Saida" required></td>
                     </tr>
                 </table>
                 <br><br>

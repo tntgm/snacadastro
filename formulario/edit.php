@@ -23,6 +23,7 @@
                 $motivo = $user_data['motivo'];
                 $data_visita = $user_data['data_visita'];
                 $Hora_Entrada = $user_data['Hora_Entrada'];
+                $Hora_Saida = $user_data['Hora_Saida'];
                 $autorizadopor = $user_data['autorizadopor'];
                 $integracao = $user_data['integracao'];
                 $data_integ = $user_data['data_integ'];
@@ -111,6 +112,13 @@
             outline: none;
             font-size: 15px;
         }
+         #data_visita{
+            border: none;
+            padding: 8px;
+            border-radius: 10px;
+            outline: none;
+            font-size: 15px;
+        }
         #update{
             background-image: linear-gradient(to right,rgb(0, 92, 197), rgb(90, 20, 220));
             width: 100%;
@@ -153,18 +161,25 @@
         table{
             font-family: sans-serif;
             font-size: 15px;
-            text-align: left;
+            text-align: center;
             height: 15px;
             
         }
 
         th{
                         
-            width: 60%;
+            width: 30%;
             height: 10px;
             
         }
         #Hora_Entrada{
+            border: none;
+            padding: 8px;
+            border-radius: 10px;
+            outline: 5px;
+            font-size: 15px;
+        }
+        #Hora_Saida{
             border: none;
             padding: 8px;
             border-radius: 10px;
@@ -238,10 +253,12 @@
                     <tr>
                         <th>Data da Visita.:</th>
                         <th>Horário Entrada.:</th>
+                        <th>Horário Saída.:</th>
                     </tr>
                     <tr>
                         <td><input type="date" name="data_visita" id="data_visita" value="<?php echo $data_visita ?>" required></td>
                         <td><input type="time" name="Hora_Entrada" id="Hora_Entrada" value="<?php echo $Hora_Entrada ?>" required></td>
+                        <td><input type="time" name="Hora_Saida" id="Hora_Saida" value="<?php echo $Hora_Saida ?>" required></td>
                     </tr>
                 </table>
                 <br><br>
